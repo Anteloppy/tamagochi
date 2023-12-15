@@ -16,6 +16,7 @@ using tamagochi.pages;
 
 namespace tamagochi
 {
+    //https://www.flaticon.com/ru/packs/cat-smiley
     /// <summary>
     /// Логика взаимодействия для MainWindow.xaml
     /// </summary>
