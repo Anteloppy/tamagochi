@@ -22,7 +22,9 @@ namespace tamagochi.pages
     {
         public TopMenu()
         {
+            IconThirst.Source = new BitmapImage(new Uri("ThirstIcon.png", UriKind.Relative));
             InitializeComponent();
+
         }
     }
 }
