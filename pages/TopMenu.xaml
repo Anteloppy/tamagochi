@@ -21,17 +21,17 @@
             <RowDefinition Height="1*"/>
             <RowDefinition Height="1*"/>
         </Grid.RowDefinitions>
-        <Image x:Name="IconHunger" MinHeight="10" MinWidth="10" Margin="5,1,5,1" Grid.Column="0" Grid.Row="0"/>
-        <Image x:Name="IconThirst" MinHeight="10" MinWidth="10" Margin="5,1,5,1" Grid.Column="0" Grid.Row="1"/>
-        <Image x:Name="IconMood" MinHeight="10" MinWidth="10" Margin="5,1,5,1" Grid.Column="0" Grid.Row="2"/>
+        <Image x:Name="IconHunger" MinHeight="10" MinWidth="10" Margin="5,1,5,1" Grid.Column="0" Grid.Row="0" Source="/pages/HungerIcon.png"/>
+        <Image x:Name="IconThirst" MinHeight="10" MinWidth="10" Margin="5,1,5,1" Grid.Column="0" Grid.Row="1" Source="/pages/ThirstIcon.png"/>
+        <Image x:Name="IconMood" MinHeight="10" MinWidth="10" Margin="5,1,5,1" Grid.Column="0" Grid.Row="2" Source="/pages/MoodIcon.png"/>
         <Image x:Name="IconSleepnes" MinHeight="10" MinWidth="10" Margin="5,1,5,1" Grid.Column="0" Grid.Row="3"/>
         <Image x:Name="IconBeauty" MinHeight="10" MinWidth="10" Margin="5,1,5,1" Grid.Column="0" Grid.Row="4"/>
         <Image x:Name="IconHealth" MinHeight="10" MinWidth="10" Margin="5,1,5,1" Grid.Column="0" Grid.Row="5"/>
-        <StatusBar x:Name="StatHunger" Margin="3" BorderBrush="Brown" BorderThickness="2" Grid.Column="1" Grid.Row="0"/>
-        <StatusBar x:Name="StatThirst" Margin="3" BorderBrush="Blue" BorderThickness="2" Grid.Column="1" Grid.Row="1"/>
-        <StatusBar x:Name="StatMood" Margin="3" BorderBrush="Orange" BorderThickness="2" Grid.Column="1" Grid.Row="2"/>
-        <StatusBar x:Name="StatSleepnes" Margin="3" BorderBrush="Cyan" BorderThickness="2" Grid.Column="1" Grid.Row="3"/>
-        <StatusBar x:Name="StatBeauty" Margin="3" BorderBrush="Yellow" BorderThickness="2" Grid.Column="1" Grid.Row="4"/>
-        <StatusBar x:Name="StatHealth" Margin="3" BorderBrush="Red" BorderThickness="2" Grid.Column="1" Grid.Row="5"/>
+        <ProgressBar x:Name="StatHunger" Margin="3" BorderBrush="Brown" BorderThickness="2" Grid.Column="1" Grid.Row="0" Foreground="#3FA52A2A"/>
+        <ProgressBar x:Name="StatThirst" Margin="3" BorderBrush="Blue" BorderThickness="2" Grid.Column="1" Grid.Row="1" Foreground="#3F0000FF"/>
+        <ProgressBar x:Name="StatMood" Margin="3" BorderBrush="Orange" BorderThickness="2" Grid.Column="1" Grid.Row="2" Foreground="#3FFFA500"/>
+        <ProgressBar x:Name="StatSleepnes" Margin="3" BorderBrush="Cyan" BorderThickness="2" Grid.Column="1" Grid.Row="3" Foreground="#3F00FFFF"/>
+        <ProgressBar x:Name="StatBeauty" Margin="3" BorderBrush="Yellow" BorderThickness="2" Grid.Column="1" Grid.Row="4" Foreground="#3FFFFF00"/>
+        <ProgressBar x:Name="StatHealth" Margin="3" BorderBrush="Red" BorderThickness="2" Grid.Column="1" Grid.Row="5" Foreground="#3FFF0000"/>
     </Grid>
 </Page>

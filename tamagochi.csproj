@@ -81,6 +81,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="pages\PetPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="pages\RightMenu.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -91,6 +95,7 @@
     </Page>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="methods\StatUpdate.cs" />
     <Compile Include="pages\BottomMenu.xaml.cs">
       <DependentUpon>BottomMenu.xaml</DependentUpon>
     </Compile>
@@ -99,6 +104,9 @@
     </Compile>
     <Compile Include="pages\MainPage.xaml.cs">
       <DependentUpon>MainPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="pages\PetPage.xaml.cs">
+      <DependentUpon>PetPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="pages\RightMenu.xaml.cs">
       <DependentUpon>RightMenu.xaml</DependentUpon>
@@ -132,12 +140,19 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="HungerIcon.png" />
-    <Resource Include="MoodIcon.png" />
-    <Resource Include="ThirstIcon.png" />
+    <Resource Include="pages\кот.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Resourse\" />
+    <Resource Include="pages\HungerIcon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="pages\ThirstIcon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="pages\MoodIcon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="pages\фон.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

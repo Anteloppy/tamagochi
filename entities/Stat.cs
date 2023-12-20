@@ -9,11 +9,11 @@ namespace tamagochi.entities
     internal class Stat
     {
         public int id { get; set; }
-        public decimal hunger { get; set; }
-        public decimal thirst { get; set; }
-        public decimal mood { get; set; }
-        public decimal sleepiness { get; set; }
-        public decimal beauty { get; set; }
-        public decimal health { get; set; }
+        public double hunger { get; set; }
+        public double thirst { get; set; }
+        public double mood { get; set; }
+        public double sleepiness { get; set; }
+        public double beauty { get; set; }
+        public double health { get; set; }
     }
 }

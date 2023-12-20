@@ -25,6 +25,7 @@ namespace tamagochi
         public MainWindow()
         {
             InitializeComponent();
+            PetFrame.Navigate(new PetPage());
             MainFrame.Navigate(new MainPage());
             MenuTop.Navigate(new TopMenu());
             MenuBottom.Navigate(new BottomMenu());
