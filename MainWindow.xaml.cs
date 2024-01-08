@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using tamagochi.entities;
 using tamagochi.pages;
 
 namespace tamagochi
@@ -25,10 +26,10 @@ namespace tamagochi
         public MainWindow()
         {
             InitializeComponent();
+
             PetFrame.Navigate(new PetPage());
             MainFrame.Navigate(new MainPage());
-            MenuTop.Navigate(new TopMenu());
-            MenuBottom.Navigate(new BottomMenu());
+            MenuTopBottom.Navigate(new TopBottomMenu());
             MenuLeft.Navigate(new LeftMenu());
             MenuRight.Navigate(new RightMenu());
         }

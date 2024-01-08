@@ -1,0 +1,79 @@
+﻿<Page x:Class="tamagochi.pages.TopBottomMenu"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:tamagochi.pages"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="TopBottomMenu">
+
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="0*"/>
+            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="5*"/>
+            <ColumnDefinition Width="1*"/>
+            <ColumnDefinition Width="0*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="0*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="4*"/>
+            <RowDefinition Height="1*"/>
+            <RowDefinition Height="0*"/>
+        </Grid.RowDefinitions>
+        <Grid Grid.Row="0" Grid.RowSpan="2" Grid.Column="2">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="0.1*"/>
+                <ColumnDefinition Width="1*"/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="1*"/>
+                <RowDefinition Height="1*"/>
+                <RowDefinition Height="1*"/>
+                <RowDefinition Height="1*"/>
+                <RowDefinition Height="1*"/>
+                <RowDefinition Height="1*"/>
+            </Grid.RowDefinitions>
+            <Image x:Name="IconHunger" MinHeight="10" MinWidth="10" Margin="5,1,5,1" Grid.Column="0" Grid.Row="0" Source="/pages/HungerIcon.png"/>
+            <Image x:Name="IconThirst" MinHeight="10" MinWidth="10" Margin="5,1,5,1" Grid.Column="0" Grid.Row="1" Source="/pages/ThirstIcon.png"/>
+            <Image x:Name="IconMood" MinHeight="10" MinWidth="10" Margin="5,1,5,1" Grid.Column="0" Grid.Row="2" Source="/pages/MoodIcon.png"/>
+            <Image x:Name="IconSleepnes" MinHeight="10" MinWidth="10" Margin="5,1,5,1" Grid.Column="0" Grid.Row="3"/>
+            <Image x:Name="IconBeauty" MinHeight="10" MinWidth="10" Margin="5,1,5,1" Grid.Column="0" Grid.Row="4"/>
+            <Image x:Name="IconHealth" MinHeight="10" MinWidth="10" Margin="5,1,5,1" Grid.Column="0" Grid.Row="5"/>
+            <Grid Grid.Column="1" Grid.Row="0" Margin="1">
+                <Border BorderBrush="#FF860505" BorderThickness="2" />
+                <ProgressBar x:Name="StatHunger" Margin="3" Value="100" Foreground="#FF9A501D" />
+            </Grid>
+            <Grid Grid.Column="1" Grid.Row="1"  Margin="1">
+                <Border BorderBrush="#FF321ADA" BorderThickness="2"/>
+                <ProgressBar x:Name="StatThirst" Margin="3" Value="100" Foreground="#FF1C62EC" />
+            </Grid>
+            <Grid Grid.Column="1" Grid.Row="2" Margin="1">
+                <Border BorderBrush="#FFDC6500" BorderThickness="2" />
+                <ProgressBar x:Name="StatMood" Margin="3" Value="100" Foreground="#FFFFAA2D" />
+            </Grid>
+            <Grid Grid.Column="1" Grid.Row="3" Margin="1">
+                <Border BorderBrush="#FF389FFF" BorderThickness="2"/>
+                <ProgressBar x:Name="StatSleepnes" Margin="3" Value="100" Foreground="#FF79FFFC" />
+            </Grid>
+            <Grid Grid.Column="1" Grid.Row="4" Margin="1">
+                <Border BorderBrush="#FFFFC117" BorderThickness="2"/>
+                <ProgressBar x:Name="StatBeauty" Margin="3"  Value="0" Foreground="#FFFFFF3E" />
+            </Grid>
+            <Grid Grid.Column="1" Grid.Row="5"  Margin="1">
+                <Border BorderBrush="#FFBD0B54" BorderThickness="2"/>
+                <ProgressBar x:Name="StatHealth" Margin="3" Value="100" Foreground="#FFFF4C4C"/>
+            </Grid>
+        </Grid>
+        <StackPanel Orientation="Horizontal" Grid.Row="3" Grid.RowSpan="2" Grid.Column="2" HorizontalAlignment="Center">
+            <Button x:Name="Feed" Content="Покормить" Height="25" Click="Feed_Click"/>
+            <Button x:Name="Drink" Content="Напоить" Height="25" Margin="5" Click="Drink_Click"/>
+            <Button x:Name="Play" Content="Поиграть" Height="25" Click="Play_Click"/>
+            <Button x:Name="Put" Content="Уложить" Height="25" Margin="5" Click="Put_Click"/>
+            <Button x:Name="Cutie" Content="Украсить" Height="25" Click="Cutie_Click"/>
+            <Button x:Name="Heal" Content="Полечить" Height="25" Margin="5,0,0,0" Click="Heal_Click"/>
+        </StackPanel>
+    </Grid>
+</Page>

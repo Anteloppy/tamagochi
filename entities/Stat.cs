@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace tamagochi.entities
 {
-    internal class Stat
+    public class Stat
     {
         public int id { get; set; }
         public double hunger { get; set; }

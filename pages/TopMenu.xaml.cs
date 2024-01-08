@@ -24,32 +24,45 @@ namespace tamagochi.pages
     /// </summary>
     public partial class TopMenu : Page
     {
-        private DispatcherTimer timer;
-        public TopMenu()
+        public Stat stat;
+        private DispatcherTimer needTimer;
+
+        public TopMenu(Stat statInstance)
         {
             InitializeComponent();
-            var metod = new StatUpdate();
-            metod.Update();
-            StatView();
+            stat = statInstance;
+
+            var bottomMenu = new BottomMenu(stat);
+            bottomMenu.HungerIncreasedEvent += (sender, value) => IncreaseHunger(value);
+
+            stat = new Stat { hunger = 100, thirst = 100, mood = 100, sleepiness = 100, beauty = 0, health = 100};
+
+            needTimer = new DispatcherTimer();
+            needTimer.Interval = TimeSpan.FromSeconds(1);
+            needTimer.Tick += DeclineNeeds;
+            needTimer.Start();
+
+            
+
+            //var metod = new StatUpdate();
+            //metod.Update();
+            //StatView();
         }
-        Stat stat = new Stat
+
+        public void DeclineNeeds(object sender, EventArgs e)
         {
-            id = 1,
-            hunger = 100,
-            thirst = 100,
-            mood = 100,
-            sleepiness = 100,
-            beauty = 0,
-            health = 100
-        };
-        public void StatView()
+            StatHunger.Value = stat.hunger -= 1;
+            StatThirst.Value = stat.thirst -= 2;
+            StatMood.Value = stat.mood -= 0.5;
+            StatSleepnes.Value = stat.sleepiness -= 0.2;
+            if (stat.hunger <= 0 || stat.thirst <= 0 || stat.mood <= 0 || stat.sleepiness <= 0) StatHealth.Value -= 10;
+            else if (stat.hunger <= 20 || stat.thirst <= 20 || stat.mood <= 20 || stat.sleepiness <= 20) stat.health -= 1;
+        }
+
+        public void IncreaseHunger(int value)
         {
+            stat.hunger += value;
             StatHunger.Value = stat.hunger;
-            StatThirst.Value = stat.thirst;
-            StatMood.Value = stat.mood;
-            StatSleepnes.Value = stat.sleepiness;
-            StatBeauty.Value = stat.beauty;
-            StatHealth.Value = stat.health;
         }
     }
 }

@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using tamagochi.entities;
 
 namespace tamagochi.pages
 {
@@ -20,9 +21,37 @@ namespace tamagochi.pages
     /// </summary>
     public partial class BottomMenu : Page
     {
-        public BottomMenu()
+        public Stat stat;
+        public event EventHandler<int> HungerIncreasedEvent;
+        public BottomMenu(Stat statInstance)
         {
             InitializeComponent();
+            stat = statInstance;
+        }
+
+        private void Feed_Click(object sender, RoutedEventArgs e)
+        {
+            HungerIncreasedEvent?.Invoke(this, 25);
+        }
+
+        private void Drink_Click(object sender, RoutedEventArgs e)
+        {
+            stat.thirst += 25;
+        }
+
+        private void Play_Click(object sender, RoutedEventArgs e)
+        {
+            stat.mood += 25;
+        }
+
+        private void Put_Click(object sender, RoutedEventArgs e)
+        {
+            stat.sleepiness += 25;
+        }
+
+        private void Heal_Click(object sender, RoutedEventArgs e)
+        {
+            stat.health += 25;
         }
     }
 }

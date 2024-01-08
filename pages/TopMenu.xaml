@@ -27,11 +27,11 @@
         <Image x:Name="IconSleepnes" MinHeight="10" MinWidth="10" Margin="5,1,5,1" Grid.Column="0" Grid.Row="3"/>
         <Image x:Name="IconBeauty" MinHeight="10" MinWidth="10" Margin="5,1,5,1" Grid.Column="0" Grid.Row="4"/>
         <Image x:Name="IconHealth" MinHeight="10" MinWidth="10" Margin="5,1,5,1" Grid.Column="0" Grid.Row="5"/>
-        <ProgressBar x:Name="StatHunger" Margin="3" BorderBrush="Brown" BorderThickness="2" Grid.Column="1" Grid.Row="0" Foreground="#3FA52A2A"/>
-        <ProgressBar x:Name="StatThirst" Margin="3" BorderBrush="Blue" BorderThickness="2" Grid.Column="1" Grid.Row="1" Foreground="#3F0000FF"/>
-        <ProgressBar x:Name="StatMood" Margin="3" BorderBrush="Orange" BorderThickness="2" Grid.Column="1" Grid.Row="2" Foreground="#3FFFA500"/>
-        <ProgressBar x:Name="StatSleepnes" Margin="3" BorderBrush="Cyan" BorderThickness="2" Grid.Column="1" Grid.Row="3" Foreground="#3F00FFFF"/>
-        <ProgressBar x:Name="StatBeauty" Margin="3" BorderBrush="Yellow" BorderThickness="2" Grid.Column="1" Grid.Row="4" Foreground="#3FFFFF00"/>
-        <ProgressBar x:Name="StatHealth" Margin="3" BorderBrush="Red" BorderThickness="2" Grid.Column="1" Grid.Row="5" Foreground="#3FFF0000"/>
+        <ProgressBar x:Name="StatHunger" Margin="3" BorderBrush="Brown" BorderThickness="2" Grid.Column="1" Grid.Row="0" Foreground="#3FA52A2A" Value="100"/>
+        <ProgressBar x:Name="StatThirst" Margin="3" BorderBrush="Blue" BorderThickness="2" Grid.Column="1" Grid.Row="1" Foreground="#3F0000FF" Value="100"/>
+        <ProgressBar x:Name="StatMood" Margin="3" BorderBrush="Orange" BorderThickness="2" Grid.Column="1" Grid.Row="2" Foreground="#3FFFA500" Value="100"/>
+        <ProgressBar x:Name="StatSleepnes" Margin="3" BorderBrush="Cyan" BorderThickness="2" Grid.Column="1" Grid.Row="3" Foreground="#3F00FFFF" Value="100"/>
+        <ProgressBar x:Name="StatBeauty" Margin="3" BorderBrush="Yellow" BorderThickness="2" Grid.Column="1" Grid.Row="4" Foreground="#3FFFFF00" Value="100"/>
+        <ProgressBar x:Name="StatHealth" Margin="3" BorderBrush="Red" BorderThickness="2" Grid.Column="1" Grid.Row="5" Foreground="#3FFF0000" Value="100"/>
     </Grid>
 </Page>

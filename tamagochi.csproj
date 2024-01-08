@@ -89,6 +89,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="pages\TopBottomMenu.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="pages\TopMenu.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -110,6 +114,9 @@
     </Compile>
     <Compile Include="pages\RightMenu.xaml.cs">
       <DependentUpon>RightMenu.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="pages\TopBottomMenu.xaml.cs">
+      <DependentUpon>TopBottomMenu.xaml</DependentUpon>
     </Compile>
     <Compile Include="pages\TopMenu.xaml.cs">
       <DependentUpon>TopMenu.xaml</DependentUpon>
