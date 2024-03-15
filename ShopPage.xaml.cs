@@ -80,7 +80,8 @@ namespace tamagochi
                     mainWindow.BuyItem(si.price);
                     LoadData(select);
                 }
-                else MessageBox.Show("недостаточно монет");
+                else if (mainWindow.coin < si.price)
+                MessageBox.Show("недостаточно монет");
             }
             else MessageBox.Show("уже продано");
         }

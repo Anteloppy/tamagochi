@@ -107,17 +107,21 @@
                 <Image Source="/CoinIcon.png" Width="50"/>
                 <Label x:Name="LCoin" Content="" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="10"/>
             </StackPanel>
-            <Image x:Name="Swap" Grid.Column="1" Grid.Row="1" Width="50" Height="50" Source="/res/SwapIcon.png" MouseUp="Swap_MouseUp">
-                <Image.Style>
-                    <Style TargetType="Image">
-                        <Style.Triggers>
-                            <Trigger Property="IsMouseOver" Value="True">
-                                <Setter Property="Cursor" Value="Hand" />
-                            </Trigger>
-                        </Style.Triggers>
-                    </Style>
-                </Image.Style>
-            </Image>
+            <StackPanel Orientation="Horizontal" Grid.Column="1" Grid.Row="1" HorizontalAlignment="Center">
+                <Image x:Name="cat_head1" Source="/res/cat head1.png" Height="30" Visibility="Hidden"/>
+                <Image x:Name="Swap" Width="50" Height="50" Source="/res/SwapIcon.png" MouseUp="Swap_MouseUp">
+                    <Image.Style>
+                        <Style TargetType="Image">
+                            <Style.Triggers>
+                                <Trigger Property="IsMouseOver" Value="True">
+                                    <Setter Property="Cursor" Value="Hand" />
+                                </Trigger>
+                            </Style.Triggers>
+                        </Style>
+                    </Image.Style>
+                </Image>
+                <Image x:Name="cat_head2" Source="/res/cat head2.png" Height="30"/>
+            </StackPanel>
         </Grid>
     </Grid>
     

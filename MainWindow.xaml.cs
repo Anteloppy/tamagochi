@@ -149,10 +149,14 @@ namespace tamagochi
             switch (pet)
             {
                 case true:
+                    cat_head1.Visibility = Visibility.Visible;
+                    cat_head2.Visibility = Visibility.Hidden;
                     cat2.Visibility = Visibility.Visible;
                     cat1.Visibility = Visibility.Hidden;
                     pet = false; break;
                 case false:
+                    cat_head2.Visibility = Visibility.Visible;
+                    cat_head1.Visibility = Visibility.Hidden;
                     cat1.Visibility = Visibility.Visible;
                     cat2.Visibility = Visibility.Hidden;
                     pet = true; break;
