@@ -84,12 +84,12 @@
                 </Grid>
             </Grid>
             <StackPanel Orientation="Horizontal" Grid.Row="3" Grid.RowSpan="2" Grid.Column="2" HorizontalAlignment="Center">
-                <Button x:Name="Feed" Content="Покормить" Height="25" Click="Feed_Click"/>
-                <Button x:Name="Drink" Content="Напоить" Height="25" Margin="5" Click="Drink_Click"/>
-                <Button x:Name="Play" Content="Поиграть" Height="25" Click="Play_Click"/>
-                <Button x:Name="Put" Content="Уложить" Height="25" Margin="5" Click="Put_Click"/>
-                <Button x:Name="Cutie" Content="Украсить" Height="25" Click="Cutie_Click"/>
-                <Button x:Name="Heal" Content="Полечить" Height="25" Margin="5,0,0,0" Click="Heal_Click"/>
+                <Button x:Name="Feed" Content="Покормить" Height="35" Click="Feed_Click" FontSize="15" FontWeight="Bold"/>
+                <Button x:Name="Drink" Content="Напоить" Height="35" Margin="10" Click="Drink_Click" FontSize="15" FontWeight="Bold"/>
+                <Button x:Name="Play" Content="Поиграть" Height="35" Click="Play_Click" FontSize="15" FontWeight="Bold"/>
+                <Button x:Name="Put" Content="Уложить" Height="35" Margin="10" Click="Put_Click" FontSize="15" FontWeight="Bold"/>
+                <Button x:Name="Cutie" Content="Украсить" Height="35" Click="Cutie_Click" FontSize="15" FontWeight="Bold"/>
+                <Button x:Name="Heal" Content="Полечить" Height="35" Margin="10,0,0,0" Click="Heal_Click" FontSize="15" FontWeight="Bold"/>
             </StackPanel>
             <Frame x:Name="ShopFrame" Grid.Column="2" Grid.Row="2" Visibility="Hidden" NavigationUIVisibility="Hidden"/>
             <Image x:Name="ShopButton" Source="/res/ShopHolder.png" Grid.Column="3" Grid.Row="2" MouseUp="ShopButton_MouseUp">

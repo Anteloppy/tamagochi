@@ -173,7 +173,6 @@
     <Resource Include="res\SleepnesIcon.png" />
     <Resource Include="res\SwapIcon.png" />
     <Resource Include="res\ThirstIcon.png" />
-    <Resource Include="res\кот.jpg" />
   </ItemGroup>
   <ItemGroup>
     <Resource Include="CoinIcon.png" />
