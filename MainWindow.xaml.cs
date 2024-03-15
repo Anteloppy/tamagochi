@@ -29,9 +29,7 @@ namespace tamagochi
 
             PetFrame.Navigate(new PetPage());
             MainFrame.Navigate(new MainPage());
-            MenuTopBottom.Navigate(new TopBottomMenu());
-            MenuLeft.Navigate(new LeftMenu());
-            MenuRight.Navigate(new RightMenu());
+            MenuFrame.Navigate(new pages.Menu());
         }
     }
 }

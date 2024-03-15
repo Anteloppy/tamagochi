@@ -24,9 +24,9 @@
         <Image x:Name="IconHunger" MinHeight="10" MinWidth="10" Margin="5,1,5,1" Grid.Column="0" Grid.Row="0" Source="/pages/HungerIcon.png"/>
         <Image x:Name="IconThirst" MinHeight="10" MinWidth="10" Margin="5,1,5,1" Grid.Column="0" Grid.Row="1" Source="/pages/ThirstIcon.png"/>
         <Image x:Name="IconMood" MinHeight="10" MinWidth="10" Margin="5,1,5,1" Grid.Column="0" Grid.Row="2" Source="/pages/MoodIcon.png"/>
-        <Image x:Name="IconSleepnes" MinHeight="10" MinWidth="10" Margin="5,1,5,1" Grid.Column="0" Grid.Row="3"/>
-        <Image x:Name="IconBeauty" MinHeight="10" MinWidth="10" Margin="5,1,5,1" Grid.Column="0" Grid.Row="4"/>
-        <Image x:Name="IconHealth" MinHeight="10" MinWidth="10" Margin="5,1,5,1" Grid.Column="0" Grid.Row="5"/>
+        <Image x:Name="IconSleepnes" MinHeight="10" MinWidth="10" Margin="5,1,5,1" Grid.Column="0" Grid.Row="3" Source="/pages/SleepnesIcon.png"/>
+        <Image x:Name="IconBeauty" MinHeight="10" MinWidth="10" Margin="5,1,5,1" Grid.Column="0" Grid.Row="4" Source="/pages/BeautyIcon.png"/>
+        <Image x:Name="IconHealth" MinHeight="10" MinWidth="10" Margin="5,1,5,1" Grid.Column="0" Grid.Row="5" Source="/pages/HealthIcon.png"/>
         <ProgressBar x:Name="StatHunger" Margin="3" BorderBrush="Brown" BorderThickness="2" Grid.Column="1" Grid.Row="0" Foreground="#3FA52A2A" Value="100"/>
         <ProgressBar x:Name="StatThirst" Margin="3" BorderBrush="Blue" BorderThickness="2" Grid.Column="1" Grid.Row="1" Foreground="#3F0000FF" Value="100"/>
         <ProgressBar x:Name="StatMood" Margin="3" BorderBrush="Orange" BorderThickness="2" Grid.Column="1" Grid.Row="2" Foreground="#3FFFA500" Value="100"/>

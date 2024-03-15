@@ -18,15 +18,17 @@ using tamagochi.entities;
 namespace tamagochi.pages
 {
     /// <summary>
-    /// Логика взаимодействия для TopBottomMenu.xaml
+    /// Логика взаимодействия для Menu.xaml
     /// </summary>
-    public partial class TopBottomMenu : Page
+    public partial class Menu : Page
     {
         public Stat stat;
         private DispatcherTimer needTimer;
-        public TopBottomMenu()
+        public bool shop_open = false;
+        public Menu()
         {
             InitializeComponent();
+            ShopFrame.Navigate(new ShopPage());
 
             stat = new Stat { hunger = 100, thirst = 100, mood = 100, sleepiness = 100, beauty = 0, health = 100 };
 
@@ -91,6 +93,21 @@ namespace tamagochi.pages
         private void Cutie_Click(object sender, RoutedEventArgs e)
         {
 
+        }
+
+        private void ShopButton_MouseUp(object sender, MouseButtonEventArgs e)
+        {
+            switch (shop_open)
+            {
+                case false:
+                    ShopFrame.Visibility = Visibility.Visible;
+                    shop_open = true;
+                    break;
+                case true:
+                    ShopFrame.Visibility = Visibility.Hidden;
+                    shop_open = false;
+                    break;
+            }
         }
     }
 }
