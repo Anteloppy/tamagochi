@@ -107,6 +107,7 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="ShopPage.xaml.cs" />
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -122,30 +123,13 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Page Include="pages\ShopPage.xaml">
+    <Page Include="ShopPage.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
-    </Page>
-    <Page Include="pages\PetPage.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="pages\Menu.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
     </Page>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="methods\StatUpdate.cs" />
-    <Compile Include="pages\ShopPage.xaml.cs">
-      <DependentUpon>ShopPage.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="pages\PetPage.xaml.cs">
-      <DependentUpon>PetPage.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="pages\Menu.xaml.cs">
-      <DependentUpon>Menu.xaml</DependentUpon>
-    </Compile>
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
     </Compile>
@@ -173,46 +157,32 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="pages\кот.jpg" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="pages\HungerIcon.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="pages\ThirstIcon.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="pages\MoodIcon.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="pages\SleepnesIcon.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="pages\BeautyIcon.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="pages\HealthIcon.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="pages\ShopHolder.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="pages\ShopPlace.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="pages\Cat1.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Resource Include="pages\Background.png" />
-  </ItemGroup>
-  <ItemGroup>
     <Resource Include="Background.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="pages\Shadow.png" />
+    <Resource Include="res\BeautyIcon.png" />
+    <Resource Include="res\Cat1.png" />
+    <Resource Include="res\Cat2.png" />
+    <Resource Include="res\CoinIcon.png" />
+    <Resource Include="res\HealthIcon.png" />
+    <Resource Include="res\HungerIcon.png" />
+    <Resource Include="res\MoodIcon.png" />
+    <Resource Include="res\Shadow.png" />
+    <Resource Include="res\ShopHolder.png" />
+    <Resource Include="res\ShopPlace.png" />
+    <Resource Include="res\SleepnesIcon.png" />
+    <Resource Include="res\SwapIcon.png" />
+    <Resource Include="res\ThirstIcon.png" />
+    <Resource Include="res\кот.jpg" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="pages\Cat2.png" />
+    <Resource Include="CoinIcon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="res\item1.png" />
+    <Resource Include="res\item2.png" />
+    <Resource Include="res\item3.png" />
+    <Resource Include="res\item4.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

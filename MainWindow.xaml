@@ -10,21 +10,115 @@
         <ImageBrush ImageSource="/Background.png"/>
     </Window.Background>
     <Grid>
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="0*"/>
-            <ColumnDefinition Width="1*"/>
-            <ColumnDefinition Width="5*"/>
-            <ColumnDefinition Width="1*"/>
-            <ColumnDefinition Width="0*"/>
-        </Grid.ColumnDefinitions>
-        <Grid.RowDefinitions>
-            <RowDefinition Height="0*"/>
-            <RowDefinition Height="1*"/>
-            <RowDefinition Height="4*"/>
-            <RowDefinition Height="1*"/>
-            <RowDefinition Height="0*"/>
-        </Grid.RowDefinitions>
-        <Frame x:Name="PetFrame" Grid.Column="2" Grid.Row="2"/>
-        <Frame x:Name="MenuFrame" Grid.Column="0" Grid.ColumnSpan="5" Grid.Row="0" Grid.RowSpan="5"/>
+        <Grid x:Name="Pet">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="0.9*"/>
+                <RowDefinition/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="0.2*"/>
+                <ColumnDefinition Width="1.2*"/>
+                <ColumnDefinition/>
+            </Grid.ColumnDefinitions>
+            <Image x:Name="shadow" Width="300" Source="/res/Shadow.png" Grid.Row="1" Grid.ColumnSpan="3"/>
+            <Image x:Name="cat1" Height="300" Source="/res/Cat1.png" Grid.RowSpan="3" Grid.ColumnSpan="3"/>
+            <Image x:Name="cat2" Height="230" Source="/res/Cat2.png" Grid.RowSpan="3" Grid.Column="1" Grid.ColumnSpan="2" Margin="0,80,0,0"  Visibility="Hidden"/>
+        </Grid>
+        <Grid x:Name="Menu">
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="0*"/>
+                <ColumnDefinition Width="1*"/>
+                <ColumnDefinition Width="5*"/>
+                <ColumnDefinition Width="1*"/>
+                <ColumnDefinition Width="0*"/>
+            </Grid.ColumnDefinitions>
+            <Grid.RowDefinitions>
+                <RowDefinition Height="0*"/>
+                <RowDefinition Height="1*"/>
+                <RowDefinition Height="4*"/>
+                <RowDefinition Height="1*"/>
+                <RowDefinition Height="0*"/>
+            </Grid.RowDefinitions>
+            <Grid Grid.Row="0" Grid.RowSpan="2" Grid.Column="2">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="0.1*"/>
+                    <ColumnDefinition Width="1*"/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="1*"/>
+                    <RowDefinition Height="1*"/>
+                    <RowDefinition Height="1*"/>
+                    <RowDefinition Height="1*"/>
+                    <RowDefinition Height="1*"/>
+                    <RowDefinition Height="1*"/>
+                </Grid.RowDefinitions>
+                <Image x:Name="IconHunger" MinHeight="10" MinWidth="10" Margin="5,1,5,1" Grid.Column="0" Grid.Row="0" Source="/res/HungerIcon.png"/>
+                <Image x:Name="IconThirst" MinHeight="10" MinWidth="10" Margin="5,1,5,1" Grid.Column="0" Grid.Row="1" Source="/res/ThirstIcon.png"/>
+                <Image x:Name="IconMood" MinHeight="10" MinWidth="10" Margin="5,1,5,1" Grid.Column="0" Grid.Row="2" Source="/res/MoodIcon.png"/>
+                <Image x:Name="IconSleepnes" MinHeight="10" MinWidth="10" Margin="5,1,5,1" Grid.Column="0" Grid.Row="3" Source="/res/SleepnesIcon.png"/>
+                <Image x:Name="IconBeauty" MinHeight="10" MinWidth="10" Margin="5,1,5,1" Grid.Column="0" Grid.Row="4" Source="/res/BeautyIcon.png"/>
+                <Image x:Name="IconHealth" MinHeight="10" MinWidth="10" Margin="5,1,5,1" Grid.Column="0" Grid.Row="5" Source="/res/HealthIcon.png"/>
+                <Grid Grid.Column="1" Grid.Row="0" Margin="1">
+                    <Border BorderBrush="#FF860505" BorderThickness="2" />
+                    <ProgressBar x:Name="StatHunger" Margin="3" Value="100" Foreground="#FF9A501D" />
+                </Grid>
+                <Grid Grid.Column="1" Grid.Row="1"  Margin="1">
+                    <Border BorderBrush="#FF321ADA" BorderThickness="2"/>
+                    <ProgressBar x:Name="StatThirst" Margin="3" Value="100" Foreground="#FF1C62EC" />
+                </Grid>
+                <Grid Grid.Column="1" Grid.Row="2" Margin="1">
+                    <Border BorderBrush="#FFDC6500" BorderThickness="2" />
+                    <ProgressBar x:Name="StatMood" Margin="3" Value="100" Foreground="#FFFFAA2D" />
+                </Grid>
+                <Grid Grid.Column="1" Grid.Row="3" Margin="1">
+                    <Border BorderBrush="#FF389FFF" BorderThickness="2"/>
+                    <ProgressBar x:Name="StatSleepnes" Margin="3" Value="100" Foreground="#FF79FFFC" />
+                </Grid>
+                <Grid Grid.Column="1" Grid.Row="4" Margin="1">
+                    <Border BorderBrush="#FFFFC117" BorderThickness="2"/>
+                    <ProgressBar x:Name="StatBeauty" Margin="3"  Value="0" Foreground="#FFFFFF3E" />
+                </Grid>
+                <Grid Grid.Column="1" Grid.Row="5"  Margin="1">
+                    <Border BorderBrush="#FFBD0B54" BorderThickness="2"/>
+                    <ProgressBar x:Name="StatHealth" Margin="3" Value="100" Foreground="#FFFF4C4C"/>
+                </Grid>
+            </Grid>
+            <StackPanel Orientation="Horizontal" Grid.Row="3" Grid.RowSpan="2" Grid.Column="2" HorizontalAlignment="Center">
+                <Button x:Name="Feed" Content="Покормить" Height="25" Click="Feed_Click"/>
+                <Button x:Name="Drink" Content="Напоить" Height="25" Margin="5" Click="Drink_Click"/>
+                <Button x:Name="Play" Content="Поиграть" Height="25" Click="Play_Click"/>
+                <Button x:Name="Put" Content="Уложить" Height="25" Margin="5" Click="Put_Click"/>
+                <Button x:Name="Cutie" Content="Украсить" Height="25" Click="Cutie_Click"/>
+                <Button x:Name="Heal" Content="Полечить" Height="25" Margin="5,0,0,0" Click="Heal_Click"/>
+            </StackPanel>
+            <Frame x:Name="ShopFrame" Grid.Column="2" Grid.Row="2" Visibility="Hidden" NavigationUIVisibility="Hidden"/>
+            <Image x:Name="ShopButton" Source="/res/ShopHolder.png" Grid.Column="3" Grid.Row="2" MouseUp="ShopButton_MouseUp">
+                <Image.Style>
+                    <Style TargetType="Image">
+                        <Style.Triggers>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter Property="Cursor" Value="Hand" />
+                            </Trigger>
+                        </Style.Triggers>
+                    </Style>
+                </Image.Style>
+            </Image>
+            <StackPanel Orientation="Horizontal" Grid.Row="3" Grid.Column="3">
+                <Image Source="/CoinIcon.png" Width="50"/>
+                <Label x:Name="LCoin" Content="" HorizontalAlignment="Center" VerticalAlignment="Center" Margin="10"/>
+            </StackPanel>
+            <Image x:Name="Swap" Grid.Column="1" Grid.Row="1" Width="50" Height="50" Source="/res/SwapIcon.png" MouseUp="Swap_MouseUp">
+                <Image.Style>
+                    <Style TargetType="Image">
+                        <Style.Triggers>
+                            <Trigger Property="IsMouseOver" Value="True">
+                                <Setter Property="Cursor" Value="Hand" />
+                            </Trigger>
+                        </Style.Triggers>
+                    </Style>
+                </Image.Style>
+            </Image>
+        </Grid>
     </Grid>
+    
 </Window>

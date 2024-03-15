@@ -11,6 +11,8 @@ namespace tamagochi.entities
     {
         public int id { get; set; }
         public string name { get; set; }
+        public string property { get; set; }
+        public int count { get; set; }
         public int price { get; set; }
         public string status { get; set; }
         public bool in_inventory { get; set; }
