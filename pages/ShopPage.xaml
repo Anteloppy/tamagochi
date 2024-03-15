@@ -10,6 +10,17 @@
 
     <Grid>
         <Image x:Name="ShopPlase" Source="/pages/ShopPlace.png"/>
-        <ListBox x:Name="LBItems" Margin="15" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="{x:Null}"/>
+        <ListBox x:Name="LBItems" Margin="15" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="{x:Null}">
+            <ListBox.ItemTemplate>
+                <DataTemplate>
+                    <StackPanel Orientation="Vertical">
+                        <Image Source="{Binding picture}" Width="50" Height="50"/>
+                        <TextBlock Text="{Binding name}" FontSize="16"/>
+                        <TextBlock Text="{Binding price}" FontSize="14"/>
+                        <TextBlock Text="{Binding status}" FontSize="12" Foreground="{Binding status_color}" FontWeight="Bold" HorizontalAlignment="Right" Margin="0,5,0,0"/>
+                    </StackPanel>
+                </DataTemplate>
+            </ListBox.ItemTemplate>
+        </ListBox>
     </Grid>
 </Page>

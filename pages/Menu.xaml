@@ -76,6 +76,17 @@
             <Button x:Name="Heal" Content="Полечить" Height="25" Margin="5,0,0,0" Click="Heal_Click"/>
         </StackPanel>
         <Frame x:Name="ShopFrame" Grid.Column="2" Grid.Row="2" Visibility="Hidden"/>
-        <Image x:Name="ShopButton" Source="/pages/ShopHolder.png" Grid.Column="3" Grid.Row="2" MouseUp="ShopButton_MouseUp"/>
+        <Image x:Name="ShopButton" Source="/pages/ShopHolder.png" Grid.Column="3" Grid.Row="2" MouseUp="ShopButton_MouseUp">
+            <Image.Style>
+                <Style TargetType="Image">
+                    <Style.Triggers>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter Property="Cursor" Value="Hand" />
+                        </Trigger>
+                    </Style.Triggers>
+                </Style>
+            </Image.Style>
+        </Image>
+        
     </Grid>
 </Page>

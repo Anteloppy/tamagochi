@@ -26,9 +26,10 @@ namespace tamagochi
         public MainWindow()
         {
             InitializeComponent();
-
+            PetPage pp = new PetPage();
+            pp.cat1.Visibility = Visibility.Visible;
+            pp.cat21.Visibility = Visibility.Hidden;
             PetFrame.Navigate(new PetPage());
-            MainFrame.Navigate(new MainPage());
             MenuFrame.Navigate(new pages.Menu());
         }
     }

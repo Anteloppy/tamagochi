@@ -122,14 +122,6 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Page Include="pages\BottomMenu.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="pages\MainPage.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
     <Page Include="pages\ShopPage.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -142,19 +134,9 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="pages\TopMenu.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="methods\StatUpdate.cs" />
-    <Compile Include="pages\BottomMenu.xaml.cs">
-      <DependentUpon>BottomMenu.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="pages\MainPage.xaml.cs">
-      <DependentUpon>MainPage.xaml</DependentUpon>
-    </Compile>
     <Compile Include="pages\ShopPage.xaml.cs">
       <DependentUpon>ShopPage.xaml</DependentUpon>
     </Compile>
@@ -163,9 +145,6 @@
     </Compile>
     <Compile Include="pages\Menu.xaml.cs">
       <DependentUpon>Menu.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="pages\TopMenu.xaml.cs">
-      <DependentUpon>TopMenu.xaml</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs">
       <SubType>Code</SubType>
@@ -206,9 +185,6 @@
     <Resource Include="pages\MoodIcon.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="pages\фон.png" />
-  </ItemGroup>
-  <ItemGroup>
     <Resource Include="pages\SleepnesIcon.png" />
   </ItemGroup>
   <ItemGroup>
@@ -222,6 +198,21 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="pages\ShopPlace.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="pages\Cat1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="pages\Background.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Background.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="pages\Shadow.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="pages\Cat2.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

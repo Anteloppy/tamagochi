@@ -18,13 +18,14 @@ using tamagochi.entities;
 namespace tamagochi.pages
 {
     /// <summary>
-    /// Логика взаимодействия для PetPage.xaml
+    /// Логика взаимодействия для ShopPage.xaml
     /// </summary>
     public partial class ShopPage : Page
     {
         public ShopPage()
         {
             InitializeComponent();
+            LoadData("select i.id, i.name, i.price, s.name as status,  i.in_inventory, i.picture from items as i join statuses as s on i.status = s.id");
         }
         private static string connectionString = "server=localhost; port=3306; database=tamagochi; user=root; password=Nimda123;";
         public void LoadData(string sql)
@@ -44,8 +45,7 @@ namespace tamagochi.pages
                         record.price = reader.GetInt32("price");
                         record.status = reader.GetString("status");
                         record.in_inventory = reader.GetBoolean("in_inventory");
-                        record.picture = reader.GetString("picture");
-
+                        record.picture = "/ pages /" + reader.GetString("picture");
                         items.Add(record);
                     }
                 }

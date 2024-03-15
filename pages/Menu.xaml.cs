@@ -50,19 +50,20 @@ namespace tamagochi.pages
 
             if (stat.hunger <= 30) Feed.Background = Brushes.Red;
             else if (stat.hunger <= 50) Feed.Background = Brushes.Yellow;
-            else Feed.Background = Brushes.Gray;
+            else Feed.Background = Brushes.LightGray;
             if (stat.thirst <= 30) Drink.Background = Brushes.Red;
             else if (stat.thirst <= 50) Drink.Background = Brushes.Yellow;
-            else Drink.Background = Brushes.Gray;
+            else Drink.Background = Brushes.LightGray;
             if (stat.mood <= 30) Play.Background = Brushes.Red;
             else if (stat.mood <= 50) Play.Background = Brushes.Yellow;
-            else Play.Background = Brushes.Gray;
+            else Play.Background = Brushes.LightGray;
             if (stat.sleepiness <= 30) Put.Background = Brushes.Red;
             else if (stat.sleepiness <= 50) Put.Background = Brushes.Yellow;
-            else Put.Background = Brushes.Gray;
+            else Put.Background = Brushes.LightGray;
+            Cutie.Background = Brushes.Gray;
             if (stat.health <= 30) Heal.Background = Brushes.Red;
             else if (stat.health <= 50) Heal.Background = Brushes.Yellow;
-            else Heal.Background = Brushes.Gray;
+            else Heal.Background = Brushes.LightGray;
         }
 
         private void Feed_Click(object sender, RoutedEventArgs e)
