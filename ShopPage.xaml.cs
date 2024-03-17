@@ -39,7 +39,7 @@ namespace tamagochi
                 MySqlCommand cmd = new MySqlCommand(sql, conn);
                 using (MySqlDataReader reader = cmd.ExecuteReader())
                 {
-                    while (reader.Read())
+                    while(reader.Read())
                     {
                         Item record = new Item();
                         record.id = reader.GetInt32("id");

@@ -236,5 +236,8 @@
   <ItemGroup>
     <SplashScreen Include="logo.png" />
   </ItemGroup>
+  <ItemGroup>
+    <Content Include="tamagochi.sql" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
