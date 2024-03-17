@@ -107,7 +107,21 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="BadEndWindow.xaml.cs">
+      <DependentUpon>BadEndWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="InventoryPage.xaml.cs">
+      <DependentUpon>InventoryPage.xaml</DependentUpon>
+    </Compile>
     <Compile Include="ShopPage.xaml.cs" />
+    <Page Include="BadEndWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="InventoryPage.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="MainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -161,8 +175,6 @@
   </ItemGroup>
   <ItemGroup>
     <Resource Include="res\BeautyIcon.png" />
-    <Resource Include="res\Cat1.png" />
-    <Resource Include="res\Cat2.png" />
     <Resource Include="res\CoinIcon.png" />
     <Resource Include="res\HealthIcon.png" />
     <Resource Include="res\HungerIcon.png" />
@@ -178,14 +190,51 @@
     <Resource Include="CoinIcon.png" />
   </ItemGroup>
   <ItemGroup>
-    <Resource Include="res\item1.png" />
-    <Resource Include="res\item2.png" />
-    <Resource Include="res\item3.png" />
-    <Resource Include="res\item4.png" />
-  </ItemGroup>
-  <ItemGroup>
     <Resource Include="res\cat head1.png" />
     <Resource Include="res\cat head2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="res\item 1.png" />
+    <Resource Include="res\item 10.png" />
+    <Resource Include="res\item 11.png" />
+    <Resource Include="res\item 12.png" />
+    <Resource Include="res\item 13.png" />
+    <Resource Include="res\item 14.png" />
+    <Resource Include="res\item 2.png" />
+    <Resource Include="res\item 3.png" />
+    <Resource Include="res\item 4.png" />
+    <Resource Include="res\item 5.png" />
+    <Resource Include="res\item 6.png" />
+    <Resource Include="res\item 7.png" />
+    <Resource Include="res\item 8.png" />
+    <Resource Include="res\item 9.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Background2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="InventoryHolder.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="InventoryPlace.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="cat1 sprite.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="cat2 sprite.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="res\InventoryHolder.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="bad end.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="icon.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <SplashScreen Include="logo.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

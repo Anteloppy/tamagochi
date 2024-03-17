@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -30,6 +31,30 @@ namespace tamagochi
             coin -= itemPrice;
             LCoin.Content = coin;
         }
+        public void UseItem(string itemProperty, int itemCount)
+        {
+            switch (itemProperty)
+            {
+                case "голод":
+                    StatHunger.Value = stat.hunger += itemCount;
+                    break;
+                case "жажда":
+                    StatThirst.Value = stat.thirst += itemCount;
+                    break;
+                case "настроение":
+                    StatMood.Value = stat.mood += itemCount;
+                    break;
+                case "сонливость":
+                    StatSleepnes.Value = stat.sleepiness += itemCount;
+                    break;
+                case "красота":
+                    StatBeauty.Value = stat.beauty += itemCount;
+                    break;
+                case "здоровье":
+                    StatHealth.Value = stat.health += itemCount;
+                    break;
+            }
+        }
 
         public MainWindow()
         {
@@ -54,6 +79,7 @@ namespace tamagochi
         private DispatcherTimer needTimer;
         private DispatcherTimer coinTimer;
         public bool shop_open = false;
+        public bool inventory_open = false;
 
         public void DeclineNeeds(object sender, EventArgs e)
         {
@@ -81,6 +107,13 @@ namespace tamagochi
             if (stat.health <= 30) Heal.Background = Brushes.Red;
             else if (stat.health <= 50) Heal.Background = Brushes.Yellow;
             else Heal.Background = Brushes.LightGray;
+
+            if (stat.health == 0)
+            {
+                BadEndWindow bew = new BadEndWindow();
+                bew.Show();
+                this.Close();
+            }
         }
 
         public void AddCoin(object sender, EventArgs e)
@@ -136,6 +169,11 @@ namespace tamagochi
                     ShopFrame.Navigate(new ShopPage());
                     ShopFrame.Visibility = Visibility.Visible;
                     shop_open = true;
+                    if (inventory_open == true)
+                    {
+                        InventoryFrame.Visibility = Visibility.Hidden;
+                        inventory_open = false;
+                    }
                     break;
                 case true:
                     ShopFrame.Navigate(new ShopPage());
@@ -161,6 +199,29 @@ namespace tamagochi
                     cat2.Visibility = Visibility.Hidden;
                     pet = true; break;
             }
+        }
+
+        private void InventoryButton_MouseUp(object sender, MouseButtonEventArgs e)
+        {
+            switch (inventory_open)
+            {
+                case false:
+                    InventoryFrame.Navigate(new InventoryPage());
+                    InventoryFrame.Visibility = Visibility.Visible;
+                    inventory_open = true;
+                    if (shop_open == true)
+                    {
+                        ShopFrame.Visibility = Visibility.Hidden;
+                        shop_open = false;
+                    }
+                    break;
+                case true:
+                    InventoryFrame.Navigate(new InventoryPage());
+                    InventoryFrame.Visibility = Visibility.Hidden;
+                    inventory_open = false;
+                    break;
+            }
+            
         }
     }
 }
