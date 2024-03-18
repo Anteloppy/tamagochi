@@ -15,5 +15,10 @@ namespace tamagochi.entities
         public double sleepiness { get; set; }
         public double beauty { get; set; }
         public double health { get; set; }
+
+        public double Act(double x, double add)
+        {
+            return x + add;
+        }
     }
 }

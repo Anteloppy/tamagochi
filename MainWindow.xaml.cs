@@ -18,7 +18,6 @@ using tamagochi.entities;
 
 namespace tamagochi
 {
-    //https://www.flaticon.com/ru/packs/cat-smiley
     /// <summary>
     /// Логика взаимодействия для MainWindow.xaml
     /// </summary>
@@ -121,7 +120,7 @@ namespace tamagochi
             coin += 10;
             LCoin.Content = coin;
         }
-            private void Feed_Click(object sender, RoutedEventArgs e)
+        private void Feed_Click(object sender, RoutedEventArgs e)
         {
             stat.hunger += 25;
             coin += 1;
